@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	float mile,km;
+	while (true){
+		cout <<"Converting miles to kilometers:\n";
+		cin >>mile;
+		km = 1.609344 * mile;
+		cout <<mile<<" mile = "<<km<<" km.\n";
+	}
+	return 0;
+}
