@@ -1,0 +1,24 @@
+//find the dot product of 2 vectors
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	float mag1,mag2,angle,product;
+	cout <<"Find the dot product of 2 vectors\n";
+	while (true)
+	{
+		cout<<"Type the 1st vector's magnitude:\n";
+		cin >>mag1;
+		cout <<"Type the 2nd vector's magnitude:\n";
+		cin >>mag2;
+		cout <<"Type the angle:\n";
+		cin >>angle;
+		product = mag1 * mag2 * cos(angle*M_PI/180);
+		cout <<"Dot product = "<<product;
+	}
+	
+	return 1;
+}
