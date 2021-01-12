@@ -1,4 +1,5 @@
 //find the dot product of 2 vectors
+//the dot product of 2 vectors can be find by --> dot_product = magnitude_of_vector1 * magnitude_of_vector2 * cos(angle_between_2_vectors)
 
 #include <iostream>
 #include <cmath>
