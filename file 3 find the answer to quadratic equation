@@ -1,0 +1,48 @@
+/*Solving answers to quatratic equations (ax^2 + bx + c = 0)
+using logic with 3 unique ways of answering the equation using discriminant*/
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	//assign variables
+	float a,b,c,discriminant,discriminant_minus,root,answer_positive,answer_negative,answer_zero;
+	cout <<"Find how many answer a quadratic equation has\n"<<"Insert a:\n";
+	cin >>a;
+	cout <<"Insert b:\n";
+	cin >>b;
+	cout <<"Insert c:\n";
+	cin >>c;
+	discriminant = (b*b)-(4*a*c);
+	discriminant_minus = -1*discriminant;
+	root = sqrt(discriminant);
+	answer_zero = (-b)/(2*a);
+	answer_positive = (-b+root)/(2*a);
+	answer_negative = (-b-root)/(2*a);
+	
+	//complex
+	if (discriminant < 0)
+	{
+		cout <<"The equation has 0 REAL answer (but 2 COMPLEX answers)\n\n"<<"The discriminant is equal to: "<<discriminant<<"\n\n";
+		cout <<"The 2 COMPLEX answers are:\n\n"<<b<<"+-"<<"[sqrt("<<discriminant_minus<<")]i"<<"/"<<2*a<<"\n"<<"or roughly \n\n";
+		cout <<b<<"+-"<<sqrt(discriminant_minus)<<"i"<<"/"<<2*a;
+	}//end the negative loop
+	
+	//two real
+	else if (discriminant > 0)
+	{
+		cout <<"The equation has 2 REAL answers\n";
+		cout <<"x1 = "<<answer_positive<<"\n"<<"x2 = "<<answer_negative<<"\n"<<"The discriminant is equal to: "<<discriminant;
+	}//end the positive loop
+	
+	//only one real
+	else
+	{
+		cout <<"The equation has 1 REAL answer\n"<<"x = "<<answer_zero<<"\n"<<"The discriminant is equal to: "<<discriminant;
+	}//end the zeroth loop
+	
+	return 0;
+}
